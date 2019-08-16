@@ -1,0 +1,33 @@
+{
+  "connection": "default",
+  "collectionName": "products",
+  "info": {
+    "name": "product",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "required": true,
+      "type": "string"
+    },
+    "price": {
+      "type": "biginteger",
+      "required": true
+    },
+    "stock": {
+      "type": "integer",
+      "required": true,
+      "default": "0"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload"
+    }
+  }
+}
